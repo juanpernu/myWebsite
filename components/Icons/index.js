@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Linkedin from './Linkedin';
-import Github from './Github';
+import Linkedin from './linkedin';
+import Github from './github';
 
 const icons = {
   linkedin: Linkedin,
