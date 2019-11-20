@@ -18,18 +18,30 @@ const Contact = () => (
         Or, you can contact me trough one of these networks.
       </p>
       <div>
-        <a className='contact-link' href='https://www.linkedin.com/in/juan-manuel-pernumian-01455043/'>
-          <Icons type='linkedin'/>
+        <a className='contact-link' target='_blank' href='https://www.linkedin.com/in/juan-manuel-pernumian-01455043/'>
+          <Icons type='linkedin' />
         </a>
-        <a className='contact-link' href='https://github.com/juanpernu'>
-          <Icons type='github'/>
+        <a className='contact-link' target='_blank' href='https://github.com/juanpernu'>
+          <Icons type='github' />
+        </a>
+        <a className='contact-link' target='_blank' href='https://www.instagram.com/juanpernu/'>
+          <Icons type='instagram' />
         </a>
       </div>
+      <footer>Copyright - Juan Manuel Pernumian®</footer>
     </div>
 
     <style jsx>{`
       * {
         font-size: 16px;    
+      }
+      footer {
+        font-size: 0.8em;
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        padding-bottom: 20px;
+        color: #ddd;
       }
       code {
         color: #ff3860;
@@ -73,6 +85,30 @@ const Contact = () => (
       }
       .contact-link:hover :global(.svgPath) {
         fill: #00ff8b;
+      }
+
+      @media only screen and (max-width: 800px) {
+        .hero {
+          display: flex;
+          flex-direction: column;
+          padding: 50px 20px 0;
+          width: auto;
+        }
+        .title {
+          font-size: 1.953em;
+        }
+        .description {
+          font-size: 1em;
+          width: auto;
+          line-height: 1.6;
+          color: #555;
+        }
+        .row {
+          flex-direction: column;
+        }
+        .card {
+          margin: 0 0 20px;
+        }
       }
     `}</style>
   </div>

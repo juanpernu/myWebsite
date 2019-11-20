@@ -114,6 +114,34 @@ const Home = () => (
         font-size: 13px;
         color: #333;
       }
+
+      @media only screen and (max-width: 800px) {
+        .hero {
+          display: flex;
+          flex-direction: column;
+          padding: 50px 20px 0;
+          width: auto;
+        }
+        .title {
+          font-size: 1.953em;
+        }
+        .description {
+          font-size: 1em;
+          width: auto;
+          line-height: 1.6;
+          color: #555;
+        }
+        .row {
+          flex-direction: column;
+        }
+        .card {
+          margin: 0 0 20px;
+        }
+        footer {
+          position: static;
+          padding: 20px 0;
+        }
+      }
     `}</style>
   </div>
 )

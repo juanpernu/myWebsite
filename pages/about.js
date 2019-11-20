@@ -35,11 +35,20 @@ const About = () => (
         What I most enjoy about my work is translating visual experiences into code, always by exploring new
         horizons and pushing myself to deliver my best.
       </p>
+      <footer>Copyright - Juan Manuel Pernumian®</footer>
     </div>
 
     <style jsx>{`
       * {
         font-size: 16px;    
+      }
+      footer {
+        font-size: 0.8em;
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        padding-bottom: 20px;
+        color: #ddd;
       }
       code {
         color: #ff3860;
@@ -74,6 +83,34 @@ const About = () => (
       a:hover {
         background: #00ff8b;
         color: #fff;
+      }
+
+      @media only screen and (max-width: 800px) {
+        .hero {
+          display: flex;
+          flex-direction: column;
+          padding: 50px 20px 0;
+          width: auto;
+        }
+        .title {
+          font-size: 1.953em;
+        }
+        .description {
+          font-size: 1em;
+          width: auto;
+          line-height: 1.6;
+          color: #555;
+        }
+        .row {
+          flex-direction: column;
+        }
+        .card {
+          margin: 0 0 20px;
+        }
+        footer {
+          position: static;
+          padding: 20px 0;
+        }
       }
     `}</style>
   </div>
