@@ -10,24 +10,26 @@ const links = [
   return link;
 });
 
-const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-      </li>
-      {links.map(({ key, href, label }) => (
+const Nav = ({navType}) => {
+  const navClassname = navType === 'blog' ? 'blog-nav' : 'nav';
+  return (
+    <nav className={navClassname}>
+      <ul>
         <li>
-          <Link href={href} key={key}>
-            <a>{label}</a>
+          <Link href='/'>
+            <a>Home</a>
           </Link>
         </li>
-      ))}
-    </ul>
+        {links.map(({ key, href, label }) => (
+          <li>
+            <Link href={href} key={key}>
+              <a>{label}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
 
-    <style jsx>{`
+      <style jsx>{`
       :global(body) {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
@@ -57,8 +59,15 @@ const Nav = () => (
       a:hover {
         border: 1px solid #00ff8b;
       }
+      .blog-nav a {
+        color: #fff;
+      }
+      .blog-nav a:hover {
+        border: 1px solid #ddd;
+      }
     `}</style>
-  </nav>
-)
+    </nav>
+  )
+}
 
 export default Nav;

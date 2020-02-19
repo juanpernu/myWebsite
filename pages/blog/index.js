@@ -1,22 +1,26 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Nav from '../components/nav';
+import Nav from '../../components/nav';
 
-const Works = () => (
-  <div>
+const Blog = () => (
+  <div className='root'>
     <Head>
-      <title>Juan Pernumian | Works</title>
+      <title>Juan Pernumian | Blog</title>
       <link rel='icon' href='/favicon.ico' />
     </Head>
-    <Nav />
+    <Nav navType={'blog'} />
     <div className='hero'>
-      <h1 className='title'>Works</h1>
+      <h1 className='title'>Welcome, this is my Blog.</h1>
+      <p className='description'>
+        Unlike my website, this is the digital space where I'm more designer than a Front-ender. Feel free
+        to come and read something! It's still in spanish, but writing in your own language is already quite
+        difficult, right?
+      </p>
       <div className='row'>
-        <Link href='/blog/index' as='/blog'>
+        <Link href='/blog/one' as='/blog?post=1'>
           <a className='card'>
-            <h3>Blog &rarr;</h3>
-            <p>Here is where I feel free to write.</p>
+            <h3>La angustia en los tiempos modernos &rarr;</h3>
           </a>
         </Link>
       </div>
@@ -25,7 +29,13 @@ const Works = () => (
 
     <style jsx>{`
       * {
-        font-size: 16px;    
+        font-size: 16px;
+      }
+      .root {
+        background-color: #00ff8b;
+        position: absolute;
+        width: 100%;
+        height: 100%;
       }
       footer {
         font-size: 0.8em;
@@ -35,15 +45,6 @@ const Works = () => (
         padding-bottom: 20px;
         color: #ddd;
       }
-      code {
-        color: #ff3860;
-        font-size: .875em;
-        font-weight: 400;
-        padding: .15em .3em;
-        background-color: #f5f5f5;
-        font-size: 1em;
-        border-radius: 5px;
-      }
       .hero {
         width: 100%;
         padding: 100px 20px 0;
@@ -52,14 +53,14 @@ const Works = () => (
       .title {
         margin: 0;
         width: 100%;
-        line-height: 1.6;
         font-size: 2.441em;
+        color: #fff;
       }
       .description {
         font-size: 1em;
         width: 490px;
         line-height: 1.6;
-        color: #555;
+        color: #f1f1f1;
       }
       .row {
         margin-top: 80px;
@@ -72,25 +73,20 @@ const Works = () => (
         text-align: left;
         text-decoration: none;
         color: #434343;
-        border: 1px solid #9b9b9b;
+        border: 1px solid #ddd;
         margin-right: 20px;
       }
       .card:last-child {
         margin-right: 0;
       }
       .card:hover {
-        border-color: #00ff8b;
+        border-color: #fff;
       }
       .card h3 {
         margin: 0;
-        color: #00ff8b;
+        color: #fff;
+        line-height: 1.4;
         font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
       }
 
       @media only screen and (max-width: 800px) {
@@ -99,9 +95,6 @@ const Works = () => (
           flex-direction: column;
           padding: 50px 20px 0;
           width: auto;
-        }
-        .title {
-          font-size: 1.953em;
         }
         .description {
           font-size: 1em;
@@ -115,9 +108,13 @@ const Works = () => (
         .card {
           margin: 0 0 20px;
         }
+        footer {
+          position: static;
+          padding: 20px 0;
+        }
       }
     `}</style>
   </div>
 )
 
-export default Works;
+export default Blog;
