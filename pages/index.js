@@ -1,42 +1,43 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Nav from '../components/nav';
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Nav from "../components/nav";
 
 const Home = () => (
   <div>
     <Head>
       <title>Juan Pernumian | Front-end Dev & UX Designer</title>
-      <link rel='icon' href='/favicon.ico' />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <Nav />
 
-    <div className='hero'>
-      <h1 className='title'>Juan Pernumian</h1>
-      <p className='description'>
-        I'm a 29 years-old frontend engineer from Buenos Aires, Argentina.
-        Graphic Design graduate at University of Buenos Aires.
+    <div className="hero">
+      <h1 className="title">Juan Pernumian</h1>
+      <p className="description">
+        I'm a 31 years-old entrepreneur from Buenos Aires, Argentina. Javascript
+        software developer & Graphic Design graduate at University of Buenos
+        Aires.
       </p>
-      <p className='description'>
+      <p className="description">
         <code>Clean code</code> and <code>pixel-perfect</code> advocate.
       </p>
 
-      <div className='row'>
-        <Link href='/works'>
-          <a className='card'>
+      <div className="row">
+        <Link href="/works">
+          <a className="card">
             <h3>Works &rarr;</h3>
             <p>Some work I have done.</p>
           </a>
         </Link>
-        <Link href='/about'>
-          <a className='card'>
+        <Link href="/about">
+          <a className="card">
             <h3>About &rarr;</h3>
             <p>A little about myself.</p>
           </a>
         </Link>
-        <Link href='/contact'>
-          <a className='card'>
+        <Link href="/contact">
+          <a className="card">
             <h3>Contact &rarr;</h3>
             <p>I can't wait to hear from you!</p>
           </a>
@@ -47,7 +48,7 @@ const Home = () => (
 
     <style jsx>{`
       * {
-        font-size: 16px;    
+        font-size: 16px;
       }
       footer {
         font-size: 0.8em;
@@ -59,9 +60,9 @@ const Home = () => (
       }
       code {
         color: #00ff8b;
-        font-size: .875em;
+        font-size: 0.875em;
         font-weight: 400;
-        padding: .15em .3em;
+        padding: 0.15em 0.3em;
         background-color: #f5f5f5;
         font-size: 1em;
         border-radius: 5px;
@@ -144,6 +145,6 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;
