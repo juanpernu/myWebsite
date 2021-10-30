@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 const links = [
-  { href: "/works", label: "Works" },
+  { href: "/articles", label: "Articles" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ].map((link) => {
@@ -32,6 +32,7 @@ const Nav = () => (
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
           Helvetica, sans-serif;
+        background-color: #000;
       }
       nav {
         text-align: center;

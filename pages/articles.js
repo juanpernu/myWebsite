@@ -3,43 +3,36 @@ import Head from "next/head";
 import Link from "next/link";
 import Nav from "../components/nav";
 
-const Home = () => (
+const Works = () => (
   <div>
     <Head>
-      <title>Juan Pernumian | Front-end Dev & UX Designer</title>
+      <title>Juan Pernumian | Works</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <Nav />
-
     <div className="hero">
-      <h1 className="title">Juan Pernumian</h1>
+      <h1 className="title">Articles</h1>
       <p className="description">
-        I'm a 31 years-old entrepreneur from Buenos Aires, Argentina. Javascript
-        software developer & Graphic Design graduate at University of Buenos
-        Aires.
+        Sometimes I like to write ideas, here are some of the articles I wrote.
       </p>
-      <p className="description">
-        <code>Clean code</code> and <code>pixel-perfect</code> advocate.
-      </p>
-
       <div className="row">
-        <Link href="/articles">
+        <Link href="https://juanpernu.medium.com/qu%C3%A9-significa-ser-full-stack-designer-198aa231117b">
           <a className="card">
-            <h3>Articles &rarr;</h3>
-            <p>Sometimes I write.</p>
+            <h3>¿Qué significa ser Full Stack Designer? &rarr;</h3>
+            <p>
+              The importance as a designer of having tech knowledge or skills.
+            </p>
+            <p className="time">3 min read.</p>
           </a>
         </Link>
-        <Link href="/about">
+        <Link href="https://juanpernu.medium.com/qu%C3%A9-significa-ser-full-stack-designer-198aa231117b">
           <a className="card">
-            <h3>About &rarr;</h3>
-            <p>A little about myself.</p>
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a className="card">
-            <h3>Contact &rarr;</h3>
-            <p>I can't wait to hear from you!</p>
+            <h3>Dos enfoques para tu desarrollo profesional &rarr;</h3>
+            <p>
+              Two different ways to approach your skill set or career
+              development for modern jobs.
+            </p>
+            <p className="time">3 min read.</p>
           </a>
         </Link>
       </div>
@@ -59,18 +52,18 @@ const Home = () => (
         color: #ddd;
       }
       code {
-        color: #000;
+        color: #ff3860;
         font-size: 0.875em;
         font-weight: 400;
         padding: 0.15em 0.3em;
-        background-color: #00ff8b;
+        background-color: #f5f5f5;
         font-size: 1em;
         border-radius: 5px;
       }
       .hero {
         width: 100%;
         padding: 100px 20px 0;
-        color: #fff;
+        color: #333;
         animation: up 1s;
       }
       .title {
@@ -78,6 +71,7 @@ const Home = () => (
         width: 100%;
         line-height: 1.6;
         font-size: 4.441em;
+        color: #fff;
       }
       .description {
         font-size: 21px;
@@ -94,7 +88,7 @@ const Home = () => (
       }
       .card {
         padding: 18px 18px 24px;
-        width: 220px;
+        width: 300px;
         text-align: left;
         text-decoration: none;
         color: #434343;
@@ -111,12 +105,16 @@ const Home = () => (
         margin: 0;
         color: #00ff8b;
         font-size: 18px;
+        line-height: 27px;
       }
       .card p {
         margin: 0;
         padding: 12px 0 0;
         font-size: 13px;
         color: #fff;
+      }
+      .card .time {
+        color: #00ff8b;
       }
       @keyframes up {
         0% {
@@ -154,13 +152,9 @@ const Home = () => (
         .card {
           margin: 0 0 20px;
         }
-        footer {
-          position: static;
-          padding: 20px;
-        }
       }
     `}</style>
   </div>
 );
 
-export default Home;
+export default Works;
