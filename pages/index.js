@@ -15,15 +15,25 @@ const Home = () => (
     <div className="hero">
       <h1 className="title">Juan Pernumian</h1>
       <p className="description">
-        I'm a 31 years-old entrepreneur from Buenos Aires, Argentina. Javascript
-        software developer & Graphic Design graduate at University of Buenos
-        Aires.
+        I'm a 31 years-old entrepreneur from Buenos Aires, Argentina. MBA
+        Candidate at{" "}
+        <a className="link" href="https://iae.edu.ar">
+          IAE Business School
+        </a>
+        , Javascript software developer & Graphic Design graduate at University
+        of Buenos Aires.
       </p>
       <p className="description">
         <code>Clean code</code> and <code>pixel-perfect</code> advocate.
       </p>
 
       <div className="row">
+        <Link href="/services">
+          <a className="card">
+            <h3>Services &rarr;</h3>
+            <p>How can I help you?</p>
+          </a>
+        </Link>
         <Link href="/articles">
           <a className="card">
             <h3>Articles &rarr;</h3>
@@ -47,8 +57,9 @@ const Home = () => (
     <footer>Copyright - Juan Manuel Pernumian®</footer>
 
     <style jsx>{`
-      * {
+      :global(*) {
         font-size: 16px;
+        box-sizing: border-box;
       }
       footer {
         font-size: 0.8em;
@@ -64,8 +75,7 @@ const Home = () => (
         font-weight: 400;
         padding: 0.15em 0.3em;
         background-color: #00ff8b;
-        font-size: 1em;
-        border-radius: 5px;
+        font-size: 19px;
       }
       .hero {
         width: 100%;
@@ -86,6 +96,16 @@ const Home = () => (
         line-height: 1.6;
         letter-spacing: -0.003em;
         color: #fff;
+      }
+      a.link {
+        font-size: 21px;
+        line-height: 32px;
+        color: #00ff8b;
+        text-decoration: none;
+      }
+      a.link:hover {
+        background: #00ff8b;
+        color: #000;
       }
       .row {
         margin-top: 80px;

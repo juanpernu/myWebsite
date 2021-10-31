@@ -3,39 +3,50 @@ import Head from "next/head";
 import Link from "next/link";
 import Nav from "../components/nav";
 
-const Articles = () => (
+const Services = () => (
   <div>
     <Head>
-      <title>Juan Pernumian | Works</title>
+      <title>Juan Pernumian | Services</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Nav />
     <div className="hero">
-      <h1 className="title">Articles</h1>
+      <h1 className="title">How can I help you?</h1>
       <p className="description">
-        Sometimes I like to write ideas, here are some of the articles I wrote.
+        "Is my company ready to the digital world?", "Where should I start?",
+        "Am I scaling as fast as I want?". If you are asking yourself these
+        questions, I would love to give you a hand.
       </p>
       <div className="row">
-        <Link href="https://juanpernu.medium.com/qu%C3%A9-significa-ser-full-stack-designer-198aa231117b">
-          <a className="card">
-            <h3>¿Qué significa ser Full Stack Designer? &rarr;</h3>
-            <p>
-              The importance as a designer of having tech knowledge or skills.
-            </p>
-            <p className="time">3 min read.</p>
-          </a>
-        </Link>
-        <Link href="https://juanpernu.medium.com/qu%C3%A9-significa-ser-full-stack-designer-198aa231117b">
-          <a className="card">
-            <h3>Dos enfoques para tu desarrollo profesional &rarr;</h3>
-            <p>
-              Two different ways to approach your skill set or career
-              development for modern jobs.
-            </p>
-            <p className="time">3 min read.</p>
-          </a>
-        </Link>
+        <a className="card">
+          <h3>Consultancy</h3>
+          <p>
+            Synchronizing capabilities, culture and portfolio has never been
+            more important. Let's work together to develop the internal skills
+            and best practices that your company needs to reach sales objectives
+            using tools for today’s world.
+          </p>
+        </a>
+        <a className="card">
+          <h3>Design thinking</h3>
+          <p>
+            Having a human-centered approach drive by a problem-solving culture
+            has never been more important. I invite you to develop innovative
+            experiences that your clients will love.
+          </p>
+        </a>
+        <a className="card">
+          <h3>Web development</h3>
+          <p>
+            Take advantage of all the power of the largest window in the world,
+            the internet. Every company needs to have a robust presence in the
+            digital world, let's create it together.
+          </p>
+        </a>
       </div>
+      <a className="button" href="mailto:juan.pernumin@gmail.com">
+        Ask me anything
+      </a>
     </div>
     <footer>Copyright - Juan Manuel Pernumian®</footer>
 
@@ -76,7 +87,7 @@ const Articles = () => (
       .description {
         font-size: 21px;
         line-height: 32px;
-        width: 60%;
+        width: 50%;
         line-height: 1.6;
         letter-spacing: -0.003em;
         color: #fff;
@@ -111,10 +122,8 @@ const Articles = () => (
         margin: 0;
         padding: 12px 0 0;
         font-size: 13px;
+        line-height: 18px;
         color: #fff;
-      }
-      .card .time {
-        color: #00ff8b;
       }
       @keyframes up {
         0% {
@@ -125,6 +134,20 @@ const Articles = () => (
           transform: translateY(0);
           opacity: 1;
         }
+      }
+      .button {
+        padding: 10px 8px;
+        display: inline-block;
+        margin-top: 40px;
+        background-color: #00ff8b;
+        color: #000;
+        border: 1px solid #00ff8b;
+      }
+
+      .button:hover {
+        background-color: #000;
+        color: #00ff8b;
+        border: 1px solid #00ff8b;
       }
 
       @media only screen and (max-width: 800px) {
@@ -157,4 +180,4 @@ const Articles = () => (
   </div>
 );
 
-export default Articles;
+export default Services;
