@@ -1,45 +1,40 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import Nav from "../components/nav";
-import Icons from "../components/Icons";
 
-const Contact = () => (
+const Articles = () => (
   <div>
     <Head>
-      <title>Juan Pernumian | Contact</title>
+      <title>Juan Pernumian | Works</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Nav />
     <div className="hero">
-      <h1 className="title">Contact</h1>
+      <h1 className="title">Articles</h1>
       <p className="description">
-        I can't wait to hear from you. If you want to get in touch with me, you
-        can drop me a line or two at{" "}
-        <a href="mailto:juan.pernumian@gmail.com">juan.pernumian@gmail.com</a>.
-        Or, you can contact me trough one of these networks.
+        Sometimes I like to write ideas, here are some of the articles I wrote.
       </p>
-      <div>
-        <a
-          className="contact-link"
-          target="_blank"
-          href="https://www.linkedin.com/in/juan-manuel-pernumian-01455043/"
-        >
-          <Icons type="linkedin" colorFill="#fff" />
-        </a>
-        <a
-          className="contact-link"
-          target="_blank"
-          href="https://github.com/juanpernu"
-        >
-          <Icons type="github" colorFill="#fff" />
-        </a>
-        <a
-          className="contact-link"
-          target="_blank"
-          href="https://www.instagram.com/juanpernu/"
-        >
-          <Icons type="instagram" colorFill="#fff" />
-        </a>
+      <div className="row">
+        <Link href="https://juanpernu.medium.com/qu%C3%A9-significa-ser-full-stack-designer-198aa231117b">
+          <a className="card">
+            <h3>¿Qué significa ser Full Stack Designer? &rarr;</h3>
+            <p>
+              The importance as a designer of having tech knowledge or skills.
+            </p>
+            <p className="time">3 min read.</p>
+          </a>
+        </Link>
+        <Link href="https://juanpernu.medium.com/qu%C3%A9-significa-ser-full-stack-designer-198aa231117b">
+          <a className="card">
+            <h3>Dos enfoques para tu desarrollo profesional &rarr;</h3>
+            <p>
+              Two different ways to approach your skill set or career
+              development for modern jobs.
+            </p>
+            <p className="time">3 min read.</p>
+          </a>
+        </Link>
       </div>
     </div>
     <footer>Copyright - Juan Manuel Pernumian®</footer>
@@ -86,23 +81,40 @@ const Contact = () => (
         letter-spacing: -0.003em;
         color: #fff;
       }
-      a {
-        color: #00ff8b;
+      .row {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+      }
+      .card {
+        padding: 18px 18px 24px;
+        width: 300px;
+        text-align: left;
         text-decoration: none;
-        font-size: 21px;
+        color: #434343;
+        border: 1px solid #9b9b9b;
+        margin-right: 20px;
       }
-      a:hover {
-        background: #00ff8b;
-        color: #000;
+      .card:last-child {
+        margin-right: 0;
       }
-      .contact-link {
-        margin-right: 10px;
+      .card:hover {
+        border-color: #00ff8b;
       }
-      .contact-link:hover {
-        background: none;
+      .card h3 {
+        margin: 0;
+        color: #00ff8b;
+        font-size: 18px;
+        line-height: 27px;
       }
-      .contact-link:hover :global(.svgPath) {
-        fill: #00ff8b;
+      .card p {
+        margin: 0;
+        padding: 12px 0 0;
+        font-size: 13px;
+        color: #fff;
+      }
+      .card .time {
+        color: #00ff8b;
       }
       @keyframes up {
         0% {
@@ -145,4 +157,4 @@ const Contact = () => (
   </div>
 );
 
-export default Contact;
+export default Articles;

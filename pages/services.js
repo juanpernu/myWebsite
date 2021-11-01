@@ -3,63 +3,56 @@ import Head from "next/head";
 import Link from "next/link";
 import Nav from "../components/nav";
 
-const Home = () => (
+const Services = () => (
   <div>
     <Head>
-      <title>Juan Pernumian | Front-end Dev & UX Designer</title>
+      <title>Juan Pernumian | Services</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <Nav />
-
     <div className="hero">
-      <h1 className="title">Juan Pernumian</h1>
+      <h1 className="title">How can I help you?</h1>
       <p className="description">
-        I'm a 31 years-old entrepreneur from Buenos Aires, Argentina. MBA
-        Candidate at{" "}
-        <a className="link" href="https://iae.edu.ar">
-          IAE Business School
-        </a>
-        , Javascript software developer & Graphic Design graduate at University
-        of Buenos Aires.
+        "Is my company ready to the digital world?", "Where should I start?",
+        "Am I scaling as fast as I want?". If you are asking yourself these
+        questions, I would love to give you a hand.
       </p>
-      <p className="description">
-        <code>Clean code</code> and <code>pixel-perfect</code> advocate.
-      </p>
-
       <div className="row">
-        <Link href="/services">
-          <a className="card">
-            <h3>Services &rarr;</h3>
-            <p>How can I help you?</p>
-          </a>
-        </Link>
-        <Link href="/articles">
-          <a className="card">
-            <h3>Articles &rarr;</h3>
-            <p>Sometimes I write.</p>
-          </a>
-        </Link>
-        <Link href="/about">
-          <a className="card">
-            <h3>About &rarr;</h3>
-            <p>A little about myself.</p>
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a className="card">
-            <h3>Contact &rarr;</h3>
-            <p>I can't wait to hear from you!</p>
-          </a>
-        </Link>
+        <a className="card">
+          <h3>Consultancy</h3>
+          <p>
+            Synchronizing capabilities, culture and portfolio has never been
+            more important. Let's work together to develop the internal skills
+            and best practices that your company needs to reach sales objectives
+            using tools for today’s world.
+          </p>
+        </a>
+        <a className="card">
+          <h3>Design thinking</h3>
+          <p>
+            Having a human-centered approach drive by a problem-solving culture
+            has never been more important. I invite you to develop innovative
+            experiences that your clients will love.
+          </p>
+        </a>
+        <a className="card">
+          <h3>Web development</h3>
+          <p>
+            Take advantage of all the power of the largest window in the world,
+            the internet. Every company needs to have a robust presence in the
+            digital world, let's create it together.
+          </p>
+        </a>
       </div>
+      <a className="button" href="mailto:juan.pernumian@gmail.com">
+        Ask me anything
+      </a>
     </div>
     <footer>Copyright - Juan Manuel Pernumian®</footer>
 
     <style jsx>{`
-      :global(*) {
+      * {
         font-size: 16px;
-        box-sizing: border-box;
       }
       footer {
         font-size: 0.8em;
@@ -70,17 +63,18 @@ const Home = () => (
         color: #ddd;
       }
       code {
-        color: #000;
+        color: #ff3860;
         font-size: 0.875em;
         font-weight: 400;
         padding: 0.15em 0.3em;
-        background-color: #00ff8b;
-        font-size: 19px;
+        background-color: #f5f5f5;
+        font-size: 1em;
+        border-radius: 5px;
       }
       .hero {
         width: 100%;
         padding: 100px 20px 0;
-        color: #fff;
+        color: #333;
         animation: up 1s;
       }
       .title {
@@ -88,24 +82,15 @@ const Home = () => (
         width: 100%;
         line-height: 1.6;
         font-size: 4.441em;
+        color: #fff;
       }
       .description {
         font-size: 21px;
         line-height: 32px;
-        width: 60%;
+        width: 50%;
         line-height: 1.6;
         letter-spacing: -0.003em;
         color: #fff;
-      }
-      a.link {
-        font-size: 21px;
-        line-height: 32px;
-        color: #00ff8b;
-        text-decoration: none;
-      }
-      a.link:hover {
-        background: #00ff8b;
-        color: #000;
       }
       .row {
         margin-top: 80px;
@@ -114,7 +99,7 @@ const Home = () => (
       }
       .card {
         padding: 18px 18px 24px;
-        width: 220px;
+        width: 300px;
         text-align: left;
         text-decoration: none;
         color: #434343;
@@ -131,11 +116,13 @@ const Home = () => (
         margin: 0;
         color: #00ff8b;
         font-size: 18px;
+        line-height: 27px;
       }
       .card p {
         margin: 0;
         padding: 12px 0 0;
         font-size: 13px;
+        line-height: 18px;
         color: #fff;
       }
       @keyframes up {
@@ -147,6 +134,20 @@ const Home = () => (
           transform: translateY(0);
           opacity: 1;
         }
+      }
+      .button {
+        padding: 10px 8px;
+        display: inline-block;
+        margin-top: 40px;
+        background-color: #00ff8b;
+        color: #000;
+        border: 1px solid #00ff8b;
+      }
+
+      .button:hover {
+        background-color: #000;
+        color: #00ff8b;
+        border: 1px solid #00ff8b;
       }
 
       @media only screen and (max-width: 800px) {
@@ -174,13 +175,16 @@ const Home = () => (
         .card {
           margin: 0 0 20px;
         }
+        .button {
+          margin: 20px 0 60px;
+          width: fit-content;
+        }
         footer {
           position: static;
-          padding: 20px;
         }
       }
     `}</style>
   </div>
 );
 
-export default Home;
+export default Services;
