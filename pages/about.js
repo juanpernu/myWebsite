@@ -142,7 +142,7 @@ const About = () => (
         }
         footer {
           position: static;
-          padding: 20px 0;
+          padding: 20px;
         }
       }
     `}</style>

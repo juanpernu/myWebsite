@@ -44,7 +44,7 @@ const Services = () => (
           </p>
         </a>
       </div>
-      <a className="button" href="mailto:juan.pernumin@gmail.com">
+      <a className="button" href="mailto:juan.pernumian@gmail.com">
         Ask me anything
       </a>
     </div>
@@ -174,6 +174,13 @@ const Services = () => (
         }
         .card {
           margin: 0 0 20px;
+        }
+        .button {
+          margin: 20px 0 60px;
+          width: fit-content;
+        }
+        footer {
+          position: static;
         }
       }
     `}</style>
