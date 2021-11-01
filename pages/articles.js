@@ -152,6 +152,9 @@ const Articles = () => (
         .card {
           margin: 0 0 20px;
         }
+        .footer {
+          position: static;
+        }
       }
     `}</style>
   </div>
