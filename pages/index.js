@@ -1,15 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Nav from "../components/nav";
+import Header from "../components/head";
 
 const Home = () => (
   <div>
-    <Head>
-      <title>Juan Pernumian | Front-end Dev & UX Designer</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-
+    <Header page="Home" />
     <Nav />
 
     <div className="hero">

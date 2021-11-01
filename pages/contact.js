@@ -1,14 +1,11 @@
 import React from "react";
-import Head from "next/head";
+import Header from "../components/head";
 import Nav from "../components/nav";
 import Icons from "../components/Icons";
 
 const Contact = () => (
   <div>
-    <Head>
-      <title>Juan Pernumian | Contact</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+    <Header page="Contact" />
     <Nav />
     <div className="hero">
       <h1 className="title">Contact</h1>

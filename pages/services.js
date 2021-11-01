@@ -1,14 +1,10 @@
 import React from "react";
-import Head from "next/head";
-import Link from "next/link";
+import Header from "../components/head";
 import Nav from "../components/nav";
 
 const Services = () => (
   <div>
-    <Head>
-      <title>Juan Pernumian | Services</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+    <Header page="Services" />
     <Nav />
     <div className="hero">
       <h1 className="title">How can I help you?</h1>
