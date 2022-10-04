@@ -13,6 +13,19 @@ const Articles = () => (
         Sometimes I like to write ideas, here are some of the articles I wrote.
       </p>
       <div className="row">
+        <Link href="https://juanpernu.medium.com/un-mundo-donde-nos-adue%C3%B1amos-de-las-redes-sociales-eso-es-deso-ba3b7efdc9dd">
+          <a className="card">
+            <h3>
+              Un mundo donde nos adueñamos de las redes sociales. Eso es DeSo.
+              &rarr;
+            </h3>
+            <p>
+              DeSo. A space where people connects and share in control of their
+              own data.
+            </p>
+            <p className="time">2 min read.</p>
+          </a>
+        </Link>
         <Link href="https://juanpernu.medium.com/qu%C3%A9-significa-ser-full-stack-designer-198aa231117b">
           <a className="card">
             <h3>¿Qué significa ser Full Stack Designer? &rarr;</h3>
@@ -22,7 +35,7 @@ const Articles = () => (
             <p className="time">3 min read.</p>
           </a>
         </Link>
-        <Link href="https://juanpernu.medium.com/qu%C3%A9-significa-ser-full-stack-designer-198aa231117b">
+        <Link href="https://juanpernu.medium.com/dos-enfoques-para-tu-desarrollo-profesional-8b7059fcfdfd">
           <a className="card">
             <h3>Dos enfoques para tu desarrollo profesional &rarr;</h3>
             <p>
